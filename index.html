@@ -9,20 +9,20 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 </head>
 <body>
-  <button id="themeToggle">
-    <i class="fas fa-moon"></i> Switch to Dark Mode
+  <button id="themeToggle" type="button">
+    <i class="fas fa-moon"></i><span id="themeLabel"> Switch to Dark Mode</span>
   </button>
   <h1><i class="fas fa-calculator"></i> Tip Calculator</h1>
   <form class="calculator">
     <label for="billAmount"><i class="fas fa-dollar-sign"></i> Bill Amount:</label>
-    <input type="text" id="billAmount" placeholder="Enter bill amount">
+    <input type="number" id="billAmount" placeholder="Enter bill amount" min="0" step="0.01" required>
     
     <label for="tipPercentage"><i class="fas fa-percentage"></i> Tip Percentage:</label>
-    <input type="text" id="tipPercentage" placeholder="Enter tip percentage">
+    <input type="number" id="tipPercentage" placeholder="Enter tip percentage" min="0" step="0.01" required>
     
     <button type="submit" id="calculate">Calculate Tip</button>
     
-    <p id="totalAmount">Total: $0.00</p>
+    <p id="totalAmount" aria-live="polite">Total: $0.00</p>
   </form>
   <script src="script.js"></script>
 </body>
